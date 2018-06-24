@@ -6,8 +6,8 @@ module "prerequisites-glue" {
 }
 
 module "glue" {
-  source     = "./glue"
+  source = "./glue"
 
-  iam_glue_role = "${module.prerequisites-glue.iam_glue_role_arn}"
+  iam_glue_role  = "${module.prerequisites-glue.iam_glue_role_arn}"
+  s3_origin_path = "s3://aws-glue-medium-post"
 }
-
