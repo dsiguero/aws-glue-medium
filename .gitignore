@@ -1,0 +1,7 @@
+# Intelli J
+.idea/
+
+# Terraform
+**/.terraform
+*.tfstate
+*.tfstate.backup
