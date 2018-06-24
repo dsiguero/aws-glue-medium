@@ -4,12 +4,12 @@ data "aws_s3_bucket" "glue-source-bucket" {
 
 data "aws_iam_policy_document" "glue-s3-source-policydoc" {
   statement {
-    effect = "Allow"
+    effect  = "Allow"
     actions = ["s3:Get*"]
 
     resources = [
       "${data.aws_s3_bucket.glue-source-bucket.arn}",
-      "${data.aws_s3_bucket.glue-source-bucket.arn}/*"
+      "${data.aws_s3_bucket.glue-source-bucket.arn}/*",
     ]
   }
 }
